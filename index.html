@@ -13,6 +13,11 @@
             <div class="row">
                 <input type="text" id="input-box" placeholder="Add your task">
                 <button onclick="addTask()">Add</button>
+                 <div class="timer">
+                <input type="datetime-local" id="deadline">
+                <button onclick="startCountdown()">Start Timer</button>
+                <p id="countdown"></p>
+                </div>
             </div>   
             <ul id="list-container">
                 <!-- <li class="checked">Task 1</li>
