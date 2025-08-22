@@ -12,11 +12,12 @@
 }
 .to-to-app{
     width: 100%;
-    max-width: 540px;
+    max-width: 600px;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+
 }
 .to-to-app h2{
     color: #002765;
@@ -96,56 +97,34 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 }
-
-/* --------- Responsive Design --------- */
-@media (max-width: 768px) {
-    .to-to-app {
-        margin: 50px auto;
-        padding: 30px 20px 50px;
-    }
-
-    .row {
-        flex-direction: column;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    input {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px;
-        font-size: 14px;
-    }
+.timer {
+    margin: 20px 0;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-    .to-to-app {
-        margin: 30px auto;
-        padding: 20px 15px 40px;
-    }
+.timer button {
+    background: #ff5945;
+    border: none;
+    outline: none;
+    padding: 8px 16px;   /* reduced size */
+    font-size: 14px;     /* smaller text */
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px; /* space before input */
+}
 
-    .to-to-app h2 {
-        font-size: 20px;
-    }
+.timer input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
 
-    .to-to-app h2 img {
-        width: 24px;
-    }
-
-    ul li {
-        font-size: 15px;
-        padding: 10px 6px 10px 45px;
-    }
-
-    ul li span {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-        line-height: 35px;
-    }
+#countdown {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #ff5945;
 }
