@@ -34,3 +34,30 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+
+let countdownInterval;
+
+function startCountdown() {
+    clearInterval(countdownInterval);
+    let deadline = new Date(document.getElementById("deadline").value).getTime();
+
+    countdownInterval = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = deadline - now;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").textContent = "⏰ Time’s up!";
+            return;
+        }
+
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").textContent = 
+            `${hours}h ${minutes}m ${seconds}s remaining`;
+    }, 1000);
+}
+
